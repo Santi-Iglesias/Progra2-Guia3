@@ -1,6 +1,4 @@
-import Clas.Autobus;
-import Clas.Bicicleta;
-import Clas.Tranvia;
+import Clas.*;
 
 import java.util.Scanner;
 
@@ -49,8 +47,53 @@ public class App {
                     System.out.println("Estado: " + bicicleta1);
                     break;
                 case 2:
+                    Pato pato1 = new Pato("Patito");
+                    Murcielago murcielago1 = new Murcielago("Dracu");
+                    Pez pez1 = new Pez("Nemo");
+
+                    System.out.println("Acciones del pato");
+                    pato1.caminar();
+                    pato1.nadar();
+                    pato1.volar();
+                    pato1.comer();
+                    pato1.comunicarse("feliz");
+                    pato1.dormir();
+
+                    System.out.println("Acciones del murcielago");
+                    murcielago1.volar();
+                    murcielago1.comer();
+                    murcielago1.comunicarse("feliz");
+                    murcielago1.colgarseBocaAbajo();
+                    murcielago1.dormir();
+
+                    System.out.println("Acciones del pez");
+                    pez1.nadar();
+                    pez1.comer();
+                    pez1.comunicarse("peligro");
+                    pez1.dormir();
                     break;
                 case 3:
+                    Automovil auto1 = new Automovil("Ford","Focus", 150, 4);
+                    Autobus3 bus1 = new Autobus3("Mercedes", "1114", 80, 25);
+                    Bicicleta3 bici1 = new Bicicleta3("Vairo", "X35", 26, 10);
+                    Camion camion1 = new Camion("Volvo", "P40", 90, 32);
+
+                    auto1.setCantidadDePasajeros(3);
+                    bus1.setCantidadDePasajeros(20);
+                    camion1.setEstablecerCarga(30);
+                    System.out.println(auto1.avanzar());
+                    System.out.println(bus1.avanzar());
+                    System.out.println(camion1.avanzar());
+                    System.out.println(bici1.avanzar());
+                    System.out.println(auto1.detenerse());
+                    System.out.println(bus1.detenerse());
+                    System.out.println(camion1.detenerse());
+                    System.out.println(bici1.detenerse());
+
+                    System.out.println(auto1);
+                    System.out.println(bus1);
+                    System.out.println(camion1);
+                    System.out.println(bici1);
                     break;
                 case 0:
                     System.out.println("Saliendo...");
